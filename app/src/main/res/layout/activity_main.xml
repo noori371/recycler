@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="415dp"
+
+
+        android:layout_height="150dp"
+        android:background="#4782B1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-4dp">
+
+        <TextView
+            android:id="@+id/Text1"
+            android:layout_width="178dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+
+            android:text="Find Your recyclerview"
+            android:textColor="#F6F5F5"
+            android:textColorHint="#0E0E0E"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="236dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+
+            android:text="abc"
+            android:textColor="#F4F0F0"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Text1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Text1"
+            app:layout_constraintVertical_bias="0.375"
+            app:srcCompat="@drawable/aa" />
+
+        <EditText
+            android:id="@+id/Search"
+
+            android:layout_width="309dp"
+            android:layout_height="55dp"
+            android:background="@drawable/aa"
+
+            android:ems="10"
+
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/black"
+
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.387"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/recent"
+        android:layout_width="118dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+
+
+        android:text="Recents"
+        android:textColor="#050505"
+        android:textColorHint="#070707"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/see"
+        android:layout_width="87dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+
+        android:text="See All"
+        android:textColor="#070707"
+        android:textColorHint="#090909"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recent_recycler"
+        android:layout_width="403dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="?attr/colorButtonNormal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/aa"></ImageView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
